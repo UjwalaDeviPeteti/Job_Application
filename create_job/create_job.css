@@ -1,0 +1,77 @@
+body{
+    font-family:'Arial',sans-serif;
+    background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/07/Nature-wallpapers-hd-backgroud-1080p.jpg);
+    background-size:cover; 
+    background-position:center;
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width:400px;
+    margin:50px auto;
+    background-color:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:20px 20px 16px rgba(0, 0, 0, 0.2);
+}
+h1{
+    text-align:center;
+    color:#333;
+    font-size:28px;
+    margin-bottom:20px;
+}
+#fi{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+label{
+    font-size:14px;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:5px;
+}
+.required{
+    color:red;
+}
+input,select,textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:14px;
+    background-color:#f9f9f9;
+    transition:border-color 0.3s;
+}
+input:focus,select:focus,textarea:focus{
+    border-color:#08070d;
+    outline:none;
+}
+textarea{
+    resize:vertical;
+}
+button{
+        width:50%; 
+        padding:12px;
+        background-color:hwb(213 0% 0%);
+        color:white;
+        border:none;
+        border-radius:5px;
+        font-size:16px;
+        cursor:pointer;
+        transition:background-color 0.3s ease;
+        margin:20px auto 0; 
+        display:block;
+}
+button:hover{
+    background-color:#0056b3;
+}
+button:active{
+    background-color:#003d80;
+}
+.fg{
+    display:flex;
+    flex-direction:column;
+}

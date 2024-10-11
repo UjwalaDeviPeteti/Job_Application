@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="create_job.css">
+        <script src="create_job.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Enter Job Data</h1>
+            <form id="fi" onsubmit="create_job(event)">
+                <div class="fg">
+                    <label for="title">Job Title<span class="required">*</span></label>
+                    <input type="text" id="title" name="title" placeholder="Enter your job title" required>
+                </div>
+                
+                <div class="fg">
+                    <label for="type">Job Type<span class="required">*</span></label>
+                    <select id="type" name="type" required>
+                        <option value="">Select Job Type</option>
+                        <option value="Full-Time">Full-Time</option>
+                        <option value="Part-Time">Part-Time</option>
+                        <option value="Contract">Contract</option>
+                    </select>
+                </div>
+                
+                <div class="fg">
+                    <label for="dept">Department<span class="required">*</span></label>
+                    <select id="dept" name="dept" required>
+                        <option value="">Select Department</option>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                    </select>
+                </div>
+                
+                <div class="fg">
+                    <label for="country">Country<span class="required">*</span></label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                    </select>
+                </div>
+                
+                <div class="fg">
+                    <label for="desc">Job Description<span class="required">*</span></label>
+                    <textarea id="desc" name="desc" rows="5" placeholder="Describe something about your job here" required></textarea>
+                </div>
+                
+                <div class="fg">
+                    <label for="opdt">Opening Date<span class="required">*</span></label>
+                    <input type="date" id="opdt" name="opdt" required>
+                </div>
+                
+                <button type="submit" >Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

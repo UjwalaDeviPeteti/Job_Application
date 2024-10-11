@@ -1,0 +1,80 @@
+<html>
+<head>   
+    <link rel="stylesheet" href="apply_job.css">
+    <script src="apply_job.js" defer></script>
+    <title>Apply for Jobs</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Apply for Jobs</h1>
+        <form id="jobForm" action="/submit_application" method="post" enctype="multipart/form-data">
+            <div class="fr">
+                <div class="fc">
+                    <label for="first_name">First Name:<span class="required">*</span></label>
+                    <input type="text" id="first_name" name="first_name" required>
+                    <label for="last_name">Last Name:<span class="required">*</span></label>
+                    <input type="text" id="last_name" name="last_name" required>
+                    <label for="email">Email:<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number:<span class="required" >*</span></label>
+                    <input type="text" id="phone" name="phone" required pattern="\d{10}">
+                    <label for="address">Address:<span class="required">*</span></label>
+                    <input type="text" id="address" name="address" required>
+                    <label for="city">City:<span class="required">*</span></label>
+                    <input type="text" id="city" name="city" required>
+                    <label for="state">State:<span class="required">*</span></label>
+                    <input type="text" id="state" name="state" required>
+                    <label for="zip">Zip Code:<span class="required">*</span></label>
+                    <input type="number" id="zip" name="zip" required>
+                    <label for="country">Country:<span class="required">*</span></label>
+                    <select id="country" name="country" required>
+                        <option value="US">United States</option>
+                        <option value="IN">India</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                    </select>
+                </div>
+                <div class="fc">
+                    <label for="edu_level">Education Level:<span class="required">*</span></label>
+                    <select id="edu_level" name="edu_level" required>
+                        <option value="high_school">High School</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="doctorate">Doctorate</option>
+                    </select>
+                    <label for="edu_type">Education Type:<span class="required">*</span></label>
+                    <select id="edu_type" name="edu_type" required>
+                        <option value="full_time">Full Time</option>
+                        <option value="part_time">Part Time</option>
+                        <option value="online">Online</option>
+                    </select>
+                    <label for="resume">Upload Resume:<span class="required">*</span></label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    <label for="cover_letter">Cover Letter (Optional):</label>
+                    <textarea id="cover_letter" name="cover_letter" rows="4" cols="50"></textarea>
+                    <input type="checkbox" id="employed" name="employed" onchange="toggleEmployerFields()">
+                    <label for="employed">Are you employed?</label>
+                    <div id="employment_details" style="display:none;">
+                        <label for="current_employer">Current Employer(if employed):<span class="required">*</span></label>
+                        <input type="text" id="current_employer" name="current_employer">
+                        <label for="years_of_exp">Years of Experience:<span class="required">*</span></label>
+                        <input type="number" id="years_of_exp" name="years_of_exp" min="0" max="50">
+                    </div>
+                    <label for="jobs">Jobs You Want to Apply<span class="required">*</span></label>
+                    <select id="jobs" name="jobs"  required>
+                        <option value="job1">Java developer</option>
+                        <option value="job2">Frontend developer</option>
+                        <option value="job3">Backend developer</option>
+                        <option value="job4">Data scientist</option>
+                        <option value="job4">Data Analyst</option>
+                    </select>
+                    <button type="submit">Apply</button>
+                </div>
+            </div>
+        </form>
+        <div id="successMessage" style="display:none;margin-top:20px;color:green;font-weight:bold;">
+            Your application was successfully submitted!
+        </div>
+    </div>
+</body>
+</html>
